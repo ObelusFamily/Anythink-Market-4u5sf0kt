@@ -54,8 +54,8 @@ router.get("/", auth.optional, function (req, res, next) {
   }
 
   // This is to filter with the name of the item
-  if (typeof req.query.term !== "undefined") {
-    query.title = { $in: [req.query.term] };
+  if (typeof req.query.title !== "undefined") {
+    query.title = { $in: [req.query.title] };
   }
 
   Promise.all([
